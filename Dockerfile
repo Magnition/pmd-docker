@@ -19,4 +19,4 @@ RUN mkdir /src
 VOLUME /src
 WORKDIR /src
 
-CMD ["pmd"]
+CMD ["pmd -l apex -dir . -R rulesets/apex/ruleset.xml -failOnViolation false -format xml -r pmd.xml"]
